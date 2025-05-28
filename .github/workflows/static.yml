@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielplatz Lankow: Verkauf und Abriss - Informationsseite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.min.css">
+    <style>
+        :root {
+            --primary-color: #6A1B9A; /* Satteres Lila */
+            --secondary-color: #8E44AD; /* Ursprüngliches Lila als Sekundärfarbe */
+            --accent-color: #D32F2F; /* Kräftiges, aber nicht zu grelles Rot */
+            --light-color: #FFFFFF;
+            --dark-color: #333333; /* Dunkelgrau für Text und Footer */
+            --gray-color: #6c757d;
+            --light-gray: #e9ecef;
+            --warning-color: #ffc107;
+            --info-color: #17a2b8;
+            --body-bg-color: #F4F6F8; /* Heller Hintergrund für den Body */
+            --card-bg-color: #FFFFFF;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--body-bg-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 5px solid var(--accent-color);
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+        
+        .slogan {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.6rem;
+            margin: 2rem auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .petition-button {
+            display: block;
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem auto;
+            border-radius: var(--border-radius);
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            max-width: 800px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+        
+        .petition-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            background-color: #c02727; /* Dunkleres Rot im Hover */
+        }
+        
+        .petition-button i {
+            margin-right: 12px;
+        }
+        
+        .section {
+            background-color: var(--card-bg-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.25rem 1.75rem;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .section-header i {
+            margin-right: 12px;
+        }
+        
+        .section-content {
+            padding: 1.75rem;
+        }
+        
+        .alert {
+            padding: 1.25rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.75rem;
+            border-left-width: 5px;
+            border-left-style: solid;
+        }
+        
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb; 
+        }
+        
+        .alert-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border-color: var(--warning-color);
+        }
+        
+        .alert-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border-color: var(--info-color);
+        }
+        
+        .quote {
+            font-style: italic;
+            border-left: 5px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin: 1.75rem 0;
+            background-color: #f9f9f9;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .source {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            margin-top: 0.75rem;
+            text-align: right;
+            display: block;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 200px;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .document-list {
+            list-style: none;
+        }
+        
+        .document-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            background-color: var(--light-gray);
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .document-item:hover {
+            background-color: #dde2e6;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .document-icon {
+            font-size: 2.2rem;
+            margin-right: 1.25rem;
+            color: var(--primary-color);
+        }
+        
+        .document-info {
+            flex-grow: 1;
+        }
+        
+        .document-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .document-desc {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+        
+        .document-actions {
+            display: flex;
+            margin-left: 1rem; 
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            margin-left: 10px;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary {
+            background-color: var(--gray-color);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+                
+        .btn-icon {
+            margin-right: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.75rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        table, th, td {
+            border: 1px solid #dee2e6;
+        }
+        
+        th, td {
+            padding: 14px 18px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .tab-label {
+            padding: 12px 22px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            margin-right: 5px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .tab-label:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-top: none; 
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            animation: fadeIn 0.5s;
+            width: 100%; 
+            background-color: var(--card-bg-color);
+        }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        input[type="radio"]:checked + label {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        input[type="radio"]:checked + label + .tab-content {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .action-box {
+            background-color: var(--light-gray);
+            border: 2px dashed var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(211, 47, 47, 0.1);
+        }
+        
+        .action-box h3 {
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            font-size: 1.8rem;
+        }
+        
+        .action-box p {
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+        }
+        
+        .action-date {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 12px 0;
+            display: block; 
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin: 0 8px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .social-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .facebook { background-color: #3b5998; }
+        .twitter { background-color: #1da1f2; }
+        .whatsapp { background-color: #25d366; }
+        .email { background-color: #ea4335; }
+        .instagram { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+        
+        .form-feedback {
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: var(--border-radius);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+        .form-feedback.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .form-feedback.info {
+             background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .form-feedback.error { 
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .contact-card {
+            background-color: var(--card-bg-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        
+        .contact-card h4, .contact-card h5 { 
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            font-size: 1.2rem;
+        }
+         .contact-card h5 {
+            font-size: 1.1rem; 
+         }
+        
+        .contact-card p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .contact-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-card a:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3.5rem;
+        }
+        
+        footer p {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links li {
+            margin: 0 12px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+            color: var(--light-gray);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.6rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        
+        .impressum {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
+        }
+        
+        .impressum a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+        }
+        
+        .impressum a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1.1rem; }
+            .slogan { font-size: 1.3rem; }
+            .petition-button { font-size: 1.2rem; padding: 1.2rem 1.5rem; }
+
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            }
+            
+            .document-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .document-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .document-actions {
+                margin-top: 10px;
+                justify-content: center;
+                margin-left: 0;
+            }
+            
+            .btn {
+                padding: 8px 14px;
+                font-size: 0.9rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+            .tab-label {
+                margin-right: 0;
+                margin-bottom: 2px;
+                border-radius: var(--border-radius) var(--border-radius) 0 0;
+            }
+            input[type="radio"]:checked + label + .tab-content {
+                 border-radius: 0 0 var(--border-radius) var(--border-radius);
+            }
+        }
+        
+        /* Lightbox styles */
+        .lg-backdrop {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 11pt; 
+                line-height: 1.4;
+                color: #000;
+                background-color: #fff;
+                font-family: 'Times New Roman', Times, serif; 
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 15pt;
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+            
+            .section-header {
+                background-color: #e9ecef !important; 
+                color: #000 !important;
+                border-bottom: 1px solid #ccc;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            
+            a[href^="http"]::after, a[href^="mailto"]::after { 
+                content: " (" attr(href) ")";
+                font-size: 85%;
+                color: #555;
+            }
+            
+            .gallery {
+                display: block; 
+            }
+            
+            .gallery-item {
+                display: inline-block; 
+                width: 45%; 
+                margin: 1%;
+                page-break-inside: avoid;
+                border: 1px solid #eee;
+            }
+            .gallery-item img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            table, th, td {
+                border: 1px solid #666; 
+            }
+            th {
+                background-color: #f0f0f0 !important; 
+                color: #000 !important;
+            }
+            .timeline::after { display: none; } 
+            .timeline-item { width: 100%; padding-left: 10px; padding-right: 10px; }
+            .timeline-item::before, .timeline-item::after { display: none; } 
+            #alleFraktionenContent { display: block !important; } /* Ensure factions are printed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Rettet den Spielplatz Lankow!</h1>
+            <p>Verkauf und geplanter Abriss – Alle Informationen und Hintergründe</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="slogan no-print">
+            <i class="fas fa-exclamation-triangle"></i> Unser Spielplatz – Unsere Zukunft – Gemeinsam stark!
+        </div>
+        
+        <a href="https://www.change.org/p/oberb%C3%BCrgermeister-rico-badenschier-den-erhalt-des-spielplatz-in-lankow-neben-dem-%C3%A4rztehaus-penny-markt" target="_blank" class="petition-button no-print">
+            <i class="fas fa-pencil-alt"></i> Jetzt Petition unterschreiben & Spielplatz retten!
+        </a>
+        
+        <div class="section">
+            <div class="section-header">
+                <i class="fas fa-info-circle"></i> Worum geht es? Die Kurzfassung
+            </div>
+            <div class="section-content">
+                <div class="alert alert-danger">
+                    <strong>Dringender Handlungsbedarf:</strong> Der beliebte städtische Spielplatz an der Kieler Straße in Schwerin-Lankow soll verkauft und abgerissen werden. Es gibt erhebliche Zweifel an der Rechtmäßigkeit dieses Vorhabens, da die aktuellen Pläne stark vom ursprünglichen Beschluss des Hauptausschusses (2020) abweichen.
+                </div>
+                
+                <p>Der Spielplatz an der Kieler Straße (Flurstück 313/4, Gemarkung Lankow) ist mehr als nur eine Grünfläche – er ist ein wichtiger Treffpunkt, ein Ort der Gemeinschaft und ökologisch wertvoll für unseren Stadtteil Lankow. Im November 2020 beschloss der Hauptausschuss den Verkauf unter bestimmten Auflagen. Seitdem haben sich entscheidende Rahmenbedingungen geändert, ohne dass die Stadtpolitik erneut darüber entschieden hat.</p>
+                
+                <p>Diese Seite beleuchtet die Hintergründe, dokumentiert die Fakten und zeigt die Diskrepanzen auf, die den geplanten Verkauf und Abriss des Spielplatzes kritisch erscheinen lassen.</p>
+                
+                <div class="action-box no-print">
+                    <h3><i class="fas fa-bullhorn"></i> Nächste Aktion: Seid dabei!</h3>
+                     <p>Protestaktion für den Erhalt unseres Spielplatzes!</p>
+                    <p><strong class="action-date">Samstag, 14. Juni 2025, 14:00 - 18:00 Uhr</strong></p>
+                    <p><strong>Ort:</strong> Spielplatz Kieler Straße (Penny-Spielplatz), Lankow</p>
+                    <p>Zeigt eure Unterstützung – jede Stimme zählt!</p>
+                    <a href="#aktionen" class="btn btn-primary"><i class="fas fa-info-circle btn-icon"></i> Mehr Infos zu Aktionen</a>
+                    <div class="social-share">
+                        <a href="https://www.instagram.com/aktion.spielplatz/" target="_blank" class="social-btn instagram" title="Instagram-Seite der Initiative"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn facebook" onclick="shareSocial('facebook')"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn twitter" onclick="shareSocial('twitter')"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn whatsapp" onclick="shareSocial('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                <i class="fas fa-images"></i> Bildergalerie des Spielplatzes
+            </div>
+            <div class="section-content">
+                <div class="gallery" id="lightgallery">
+                    <a href="https://placehold.co/800x600/EAEAEA/A0A0A0?text=Spielplatz_Lankow_1" class="gallery-item" data-sub-html="<h4>Spielplatz Lankow - Aktuelle Ansicht</h4><p>Grünfläche mit Spielgeräten und altem Baumbestand</p>">
+                        <img src="https://placehold.co/600x400/EAEAEA/A0A0A0?text=Spielplatz_Lankow_1" alt="Spielplatz Lankow - Aktuelle Ansicht" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A0A0A0?text=Bild+nicht+gefunden';">
+                    </a>
+                    <a href="https://placehold.co/800x600/EAEAEA/A0A0A0?text=Spielplatz_Lankow_2" class="gallery-item" data-sub-html="<h4>Spielplatz Lankow - Nutzung durch Familien</h4><p>Der Spielplatz wird aktiv von Familien und Kindern genutzt</p>">
+                        <img src="https://placehold.co/600x400/EAEAEA/A0A0A0?text=Spielplatz_Lankow_2" alt="Spielplatz Lankow - Nutzung durch Familien" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A0A0A0?text=Bild+nicht+gefunden';">
+                    </a>
+                    <a href="https://placehold.co/800x600/EAEAEA/A0A0A0?text=Spielplatz_Lankow_3" class="gallery-item" data-sub-html="<h4>Spielplatz Lankow - Spielgeräte</h4><p>Vorhandene Spielgeräte auf dem Spielplatz</p>">
+                        <img src="https://placehold.co/600x400/EAEAEA/A0A0A0?text=Spielplatz_Lankow_3" alt="Spielplatz Lankow - Spielgeräte" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A0A0A0?text=Bild+nicht+gefunden';">
+                    </a>
+                    <a href="https://placehold.co/800x600/EAEAEA/A0A0A0?text=Vorschlag_Ersatzstandort" class="gallery-item" data-sub-html="<h4>Vorschlag Ersatzstandort (SDS)</h4><p>Plan der Stadtwirtschaftlichen Dienstleistungen Schwerin für die Ersatzstandorte</p>">
+                        <img src="https://placehold.co/600x400/EAEAEA/A0A0A0?text=Vorschlag_Ersatzstandort" alt="Vorschlag Ersatzstandort (SDS)" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A0A0A0?text=Bild+nicht+gefunden';">
+                    </a>
+                    <a href="https://placehold.co/800x600/EAEAEA/A0A0A0?text=Bauplan_Geleakt" class="gallery-item" data-sub-html="<h4>Geleakter Bauplan</h4><p>Der geleakte Bauplan für das geplante Ärztehaus und den Vollsortimenter</p>">
+                        <img src="https://placehold.co/600x400/EAEAEA/A0A0A0?text=Bauplan_Geleakt" alt="Geleakter Bauplan" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A0A0A0?text=Bild+nicht+gefunden';">
+                    </a>
+                     <a href="https://placehold.co/800x600/EAEAEA/A0A0A0?text=Beschluss_2020" class="gallery-item" data-sub-html="<h4>Original-Beschluss des Hauptausschusses</h4><p>Der Original-Beschluss des Hauptausschusses vom 03.11.2020</p>">
+                        <img src="https://placehold.co/600x400/EAEAEA/A0A0A0?text=Beschluss_2020" alt="Original-Beschluss des Hauptausschusses" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A0A0A0?text=Bild+nicht+gefunden';">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                <i class="fas fa-file-download"></i> Wichtige Dokumente zum Download
+            </div>
+            <div class="section-content">
+                <ul class="document-list">
+                    <li class="document-item">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <div class="document-title">Beschluss Hauptausschuss (03.11.2020)</div>
+                            <div class="document-desc">Originalbeschluss zum Verkauf mit Bedingungen</div>
+                        </div>
+                        <div class="document-actions">
+                            <a href="https://placehold.co/1x1/EAEAEA/A0A0A0?text=Beschluss_2020.jpg" class="btn btn-primary" download="Beschluss_HA_2020.jpg"><i class="fas fa-download btn-icon"></i> Download</a>
+                            <a href="https://placehold.co/1x1/EAEAEA/A0A0A0?text=Beschluss_2020.jpg" class="btn btn-secondary" target="_blank"><i class="fas fa-eye btn-icon"></i> Ansehen</a>
+                        </div>
+                    </li>
+                    <li class="document-item">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <div class="document-title">ZGM-Papier (05.05.2025)</div>
+                            <div class="document-desc">Aktueller Stand zum Verkauf, Änderung Käufer</div>
+                        </div>
+                        <div class="document-actions">
+                            <a href="https://placehold.co/1x1/EAEAEA/A0A0A0?text=zgm_papier.jpeg" class="btn btn-primary" download="ZGM_Papier_2025.jpeg"><i class="fas fa-download btn-icon"></i> Download</a>
+                            <a href="https://placehold.co/1x1/EAEAEA/A0A0A0?text=zgm_papier.jpeg" class="btn btn-secondary" target="_blank"><i class="fas fa-eye btn-icon"></i> Ansehen</a>
+                        </div>
+                    </li>
+                     <li class="document-item">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <div class="document-title">Geleakter Bauplan</div>
+                            <div class="document-desc">Plan für Ärztehaus & Vollsortimenter</div>
+                        </div>
+                        <div class="document-actions">
+                            <a href="https://placehold.co/1x1/EAEAEA/A0A0A0?text=Gewerbe_Aerztehaus_Lankow.pdf" class="btn btn-primary" download="Bauplan_Aerztehaus_Lankow.pdf"><i class="fas fa-download btn-icon"></i> Download</a>
+                            <a href="https://placehold.co/1x1/EAEAEA/A0A0A0?text=Gewerbe_Aerztehaus_Lankow.pdf" class="btn btn-secondary" target="_blank"><i class="fas fa-eye btn-icon"></i> Ansehen</a>
+                        </div>
+                    </li>
+                     <li class="document-item">
+                        <div class="document-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="document-info">
+                            <div class="document-title">Offener Brief des BUND (28.11.2021)</div>
+                            <div class="document-desc">Stellungnahme des BUND zum Erhalt des Spielplatzes</div>
+                        </div>
+                        <div class="document-actions">
+                            <a href="https://placehold.co/1x1/EAEAEA/A0A0A0?text=Offener_Brief_BUND.jpg" class="btn btn-primary" download="Offener_Brief_BUND_2021.jpg"><i class="fas fa-download btn-icon"></i> Download</a>
+                            <a href="https://placehold.co/1x1/EAEAEA/A0A0A0?text=Offener_Brief_BUND.jpg" class="btn btn-secondary" target="_blank"><i class="fas fa-eye btn-icon"></i> Ansehen</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                <i class="fas fa-history"></i> Chronologie der Ereignisse
+            </div>
+            <div class="section-content">
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">22.09.2020</div>
+                            <p>Ortsbeirat Lankow stimmt Beschlussvorlage mit Ergänzungen zu (u.a. Ersatzspielplatz muss vor Rückbau des alten eröffnet sein).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">03.11.2020</div>
+                            <p>Hauptausschuss beschließt Verkauf an Privatinvestor (381.520 EUR) mit Bedingung: gleichwertiger Ersatzspielplatz Polentzstraße.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">28.11.2021</div>
+                            <p>BUND Schwerin fordert in offenem Brief Erhalt des Spielplatzes aus Umwelt- und Klimaschutzgründen (wertvoller Baumbestand).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024</div>
+                            <p>Bauvorbescheid ohne Beteiligung von Ortsbeirat/Hauptausschuss/Stadtvertretung erteilt. Geplanter Baukörper: 21,90 m hoch. Verwaltungsinterne Bedenken ignoriert.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">21.05.2024</div>
+                            <p>Pläne für Ersatzspielplatz vom Ortsbeirat abgelehnt (unzureichend), später unter Druck des Investors doch zugestimmt.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">07.09.2024</div>
+                            <p>Märchen- und Sagenfest auf dem Spielplatz Lankow (Pinselpark), organisiert von Lokaler Agenda und Initiative Spielplatz.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">05.05.2025</div>
+                            <p>ZGM informiert Hauptausschuss: Käufer nun Quarta GmbH & Co. KG (ursprüngl. Käufer + CDU-naher Partner). Ersatzspielplatz auf 3 Standorte verteilt.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">19.05.2025</div>
+                            <p>Dringlichkeitsantrag in Stadtvertretung diskutiert. Kritik an Diskrepanz Beschluss/Realität. Antrag abgelehnt, Thema auf Juli-Sitzung verschoben.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">22.05.2025</div>
+                            <p>Stadtvertreter bittet Kommunalaufsicht um Beanstandung des Verwaltungshandelns.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Mai 2025</div>
+                            <p>Stadtvertretung weigert sich mehrfach, Thema zu behandeln. Verschiebung auf Juli-Sitzung.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">14.06.2025 (geplant)</div>
+                            <p>Protestaktion auf dem Spielplatz Lankow für Erhalt der Grünfläche.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Juni 2025 (geplant)</div>
+                            <p>Geplante Unterzeichnung Kaufvertrag, obwohl Stadtvertretung erst im Juli berät.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Juli 2025 (geplant)</div>
+                            <p>Stadtvertretung wird (endlich) über das Thema beraten.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                <i class="fas fa-balance-scale"></i> Vergleich: Ursprünglicher Beschluss vs. Aktueller Stand
+            </div>
+            <div class="section-content">
+                <div class="tabs">
+                    <input type="radio" name="tabs" id="tab1" checked>
+                    <label for="tab1" class="tab-label">Ursprünglicher Beschluss (2020)</label>
+                    <div class="tab-content">
+                        <div class="quote">
+                            <p>"Dem Verkauf des Grundstückes ... Flurstück 313/4 ... Gemarkung Lankow ... zu einem Kaufpreis von 381.520,-- EUR an Herrn Hans-Werner Stein ... wird zugestimmt. ... Der Käufer trägt die kompletten Kosten des neuen Spielplatzes. Es ist vertraglich so zu gestalten, dass der Spielplatz Kieler Straße erst zurück gebaut wird, wenn der Spielplatz Polentzstraße eröffnet wurde. Der Käufer hat den Spielplatz nach Vorgaben der Stadtwirtschaftlichen Dienstleistungen Schwerin (SDS) wiederherzustellen. Diese Vorgaben sind vorab mit dem betreffenden Ortsbeirat abzustimmen."</p>
+                            <p class="source">Quelle: Beschluss Hauptausschuss 03.11.2020, Nr: 037/HA/0250/2020</p>
+                        </div>
+                        <p>Beschluss einstimmig (12 Ja, 0 Nein, 0 Enthaltungen).</p>
+                    </div>
+                    
+                    <input type="radio" name="tabs" id="tab2">
+                    <label for="tab2" class="tab-label">Aktueller Stand (Mai 2025)</label>
+                    <div class="tab-content">
+                        <div class="quote">
+                            <p>"Mit Beschluss des Hauptausschusses vom 03.11.2020 ... wurde dem Verkauf ... an Herrn Hans-Werner Otto Stein zugestimmt. Die Käuferrolle übernimmt nunmehr die Quarta GmbH & Co. KG ... Gesellschafter ... Herr Hans-Werner Otto Stein und Herr Dr. Tilmann Stein."</p>
+                            <p class="source">Quelle: ZGM-Papier vom 05.05.2025</p>
+                        </div>
+                        <p>Weitere Details zum aktuellen Vertragsstand:</p>
+                        <ol>
+                            <li>Grundlage für Schaffung von drei neuen Spielplätzen.</li>
+                            <li>Ursprüngliches Ersatzgrundstück Polentzstraße nicht mehr verfügbar, daher Aufteilung auf drei Standorte.</li>
+                            <li>Kaufpreis fällig nach Fertigstellung/Abnahme von zwei Spielplätzen; für den dritten genügt genehmigte Ausführungsplanung. Besitzübergang dann.</li>
+                            <li>Neubau von zwei Spielplätzen bis vorauss. 1. Halbjahr 2026.</li>
+                            <li>Bauvorhaben (Geschäfts-/Wohnhaus) innerhalb von 5 Jahren nach Baugenehmigung fertigzustellen.</li>
+                            <li>Vertragsunterzeichnung geplant für Juni 2025.</li>
+                        </ol>
+                    </div>
+                    
+                    <input type="radio" name="tabs" id="tab3">
+                    <label for="tab3" class="tab-label">Die Diskrepanzen</label>
+                    <div class="tab-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aspekt</th>
+                                    <th>Ursprünglicher Beschluss (2020)</th>
+                                    <th>Aktueller Stand (2025)</th>
+                                    <th>Problematik</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Käuferpartei</strong></td>
+                                    <td>Privatperson H.-W. Stein</td>
+                                    <td>Quarta GmbH & Co. KG (H.-W. O. Stein & Dr. T. Stein)</td>
+                                    <td>Änderung ohne neue politische Entscheidung; Dr. T. Stein ist CDU-nah (mögl. Interessenkonflikt).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ersatzspielplatz</strong></td>
+                                    <td>Konkret: Spielplatz Polentzstraße</td>
+                                    <td>Aufteilung auf drei Standorte</td>
+                                    <td>Keine gleichwertige Fläche; Ortsbeirat lehnte Ersatz ab (zu klein/weit/unsicher), Zustimmung unter Druck.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bedingung Rückbau</strong></td>
+                                    <td>Erst Rückbau, wenn Ersatz eröffnet</td>
+                                    <td>Kaufpreis fällig nach 2 von 3 Spielplätzen; für 3. reicht Planung</td>
+                                    <td>Abschwächung; keine Garantie für vollständige Fertigstellung des 3. Spielplatzes.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Kinderbeteiligung</strong></td>
+                                    <td>Nicht explizit erwähnt</td>
+                                    <td>"Beteiligungswerkstatt" geplant</td>
+                                    <td>Bisher keine Beteiligung; Verstoß gg. Kinder-/Jugendbeteiligungsgesetz M-V; OB räumt Versäumnisse ein.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Politische Kontrolle</strong></td>
+                                    <td>-</td>
+                                    <td>Bauvorbescheid 2024 ohne politische Kontrolle</td>
+                                    <td>Ortsbeirat, Hauptausschuss, Stadtvertretung nicht beteiligt/informiert.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="aktionen">
+            <div class="section-header">
+                <i class="fas fa-bullhorn"></i> Aktionen und Bürgerbeteiligung
+            </div>
+            <div class="section-content">
+                <div class="alert alert-info">
+                    <strong>WhatsApp-Gruppe:</strong> Engagieren Sie sich! Für Infos zur WhatsApp-Gruppe sprechen Sie Teilnehmer bei Aktionen an.
+                </div>
+                
+                <h3>Nächste Aktion: Protest für unseren Spielplatz!</h3>
+                <div class="action-box">
+                    <h3><i class="fas fa-calendar-alt"></i> Save the Date: 14. Juni 2025</h3>
+                    <p><strong>Wann?</strong> Samstag, 14. Juni 2025, 14:00 - 18:00 Uhr</p>
+                    <p><strong>Wo?</strong> Spielplatz Kieler Straße (Penny-Spielplatz), Lankow</p>
+                    <p>Kommt zahlreich und setzt ein Zeichen für den Erhalt unseres Spielplatzes!</p>
+                     <div class="social-share no-print">
+                        <a href="https://www.instagram.com/aktion.spielplatz/" target="_blank" class="social-btn instagram" title="Instagram-Seite der Initiative"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn facebook" onclick="shareSocial('facebook')"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn twitter" onclick="shareSocial('twitter')"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn whatsapp" onclick="shareSocial('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-btn email" onclick="shareSocial('email')"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                 <h3>Vergangene Aktionen</h3>
+                <ul>
+                    <li><strong>Märchen- und Sagenfest (07.09.2024)</strong>
+                        <ul>
+                            <li>Ort: Pinselpark auf dem Penny-Spielplatz in Schwerin-Lankow</li>
+                            <li>Zeit: 14 bis 18 Uhr</li>
+                            <li>Organisiert von der Lokalen Agenda und der Initiative Spielplatz</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Mangelnde Kinder- und Jugendbeteiligung</h3>
+                <p>Obwohl das Kinder- und Jugendbeteiligungsgesetz M-V seit April 2024 in Kraft ist und Städte und Gemeinden verpflichtet, Kinder und Jugendliche systematisch und kontinuierlich an allen Entscheidungen zu beteiligen, die ihre Lebenswelt betreffen, wurden Kinder und Jugendliche in keiner Phase der Planung zum Spielplatz Lankow beteiligt.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <i class="fas fa-newspaper"></i> Pressestimmen
+            </div>
+            <div class="section-content">
+                <div class="tabs">
+                    <input type="radio" name="press-tabs" id="press-tab1" checked>
+                    <label for="press-tab1" class="tab-label">schwerin.news</label>
+                    <div class="tab-content">
+                        <div class="quote">
+                            <p>"Die Planungen für eine Bebauung werden im Hintergrund also fleißig vorangetrieben – und das obwohl die Beschlusslage eindeutig ist..."</p>
+                            <p class="source">schwerin.news, "Investor legt 'geheimen' Plan für Bebauung vor" (10.03.2025)</p>
+                        </div>
+                         <div class="quote">
+                            <p>"Ein Dringlichkeitsantrag bringt neue brisante Informationen zum geplanten Grundstücksverkauf..."</p>
+                            <p class="source">schwerin.news, "Spielplatz Kieler Straße: 'Der ursprüngliche Beschluss passt nicht mehr zur Realität.'" (19.05.2025)</p>
+                        </div>
+                    </div>
+                    
+                    <input type="radio" name="press-tabs" id="press-tab2">
+                    <label for="press-tab2" class="tab-label">Nordkurier</label>
+                    <div class="tab-content">
+                        <div class="quote">
+                            <p>"Es geht um den Spielplatz in der Kieler Straße in Lankow. Ein Investor möchte die Fläche bebauen."</p>
+                            <p class="source">Nordkurier, "Streit um Spielplatz: Gibt es nun endlich eine Lösung?" (07.05.2025)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <i class="fas fa-exclamation-triangle"></i> Kritische Punkte & Mögliche Rechtsverstöße
+            </div>
+            <div class="section-content">
+                <div class="alert alert-warning">
+                    <p>Die Diskrepanzen zwischen dem ursprünglichen Hauptausschussbeschluss von 2020 und dem aktuellen Verwaltungshandeln werfen ernsthafte Fragen zur Rechtmäßigkeit und demokratischen Legitimation des geplanten Verkaufs auf.</p>
+                </div>
+                <h3>CDU-Nähe des Investors</h3>
+                <p>Der neue Mitgesellschafter der Quarta GmbH & Co. KG, Dr. Tilmann Stein, ist CDU-nah. Dies wirft Fragen zu möglichen Interessenkonflikten auf.</p>
+                <h3>Mögliche Rechtsverstöße</h3>
+                <ul>
+                    <li><strong>Verstoß gegen das Kinder- und Jugendbeteiligungsgesetz M-V</strong></li>
+                    <li><strong>Umgehung demokratischer Kontrollmechanismen</strong></li>
+                    <li><strong>Abweichung vom ursprünglichen Beschluss ohne neue politische Entscheidung</strong></li>
+                    <li><strong>Verstoß gegen Grundstückspolitische Leitlinien der Stadt Schwerin</strong></li>
+                    <li><strong>Verstoß gegen den Klimanotstandsbeschluss</strong></li>
+                    <li><strong>Verstoß gegen § 7 Abs. 1 KomHKVO MV (fehlende öffentliche Ausschreibung)</strong></li>
+                </ul>
+                <h3>Umweltschutzaspekte</h3>
+                <p>Laut BUND Schwerin befinden sich auf dem Spielplatz wertvolle Baumbestände, die für das lokale Klima und die Biodiversität von großer Bedeutung sind.</p>
+            </div>
+        </div>
+        
+        <div class="section no-print" id="stadtvertreterKontakt">
+            <div class="section-header">
+                <i class="fas fa-envelope"></i> Kontaktieren Sie Ihre Stadtvertreter
+            </div>
+            <div class="section-content">
+                <p>Machen Sie Ihren Standpunkt deutlich! Fragen Sie beim Oberbürgermeister und bei den Fraktionen Ihrer gewählten Stadtvertreter nach, warum ein städtisches Grundstück an einen privaten Investor verkauft werden soll, obwohl so viele Fragen offen sind.</p>
+                
+                <div class="contact-card" style="margin-bottom: 20px; background-color: var(--light-gray);">
+                    <h4>Oberbürgermeister</h4>
+                    <p>Dr. Rico Badenschier</p>
+                    <p><i class="fas fa-envelope btn-icon"></i> <a href="mailto:oberbuergermeister@schwerin.de">oberbuergermeister@schwerin.de</a></p>
+                </div>
+
+                <button id="toggleFraktionenBtn" class="btn btn-secondary" style="margin-bottom: 20px; margin-left:0;">
+                    <i class="fas fa-users btn-icon"></i> Alle Fraktionen anzeigen
+                </button>
+                
+                <div id="alleFraktionenContent" style="display: none;">
+                    <h4 style="margin-top: 20px;">Fraktionen der Stadtvertretung Schwerin</h4>
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <h5>SPD-Fraktion</h5>
+                            <p><i class="fas fa-envelope btn-icon"></i> <a href="mailto:spd-fraktion@schwerin.de">spd-fraktion@schwerin.de</a></p>
+                            <p><i class="fas fa-phone btn-icon"></i> <a href="tel:+493855452962">+49 385 545-2962</a></p>
+                            <p><small>Vorsitz: Mandy Pfeifer</small></p>
+                        </div>
+                        <div class="contact-card">
+                            <h5>CDU-Fraktion</h5>
+                            <p><i class="fas fa-envelope btn-icon"></i> <a href="mailto:cdu-fraktion@schwerin.de">cdu-fraktion@schwerin.de</a></p>
+                            <p><i class="fas fa-phone btn-icon"></i> <a href="tel:+493855452952">+49 385 545-2952</a></p>
+                            <p><small>Vorsitz: Gert Rudolf</small></p>
+                        </div>
+                        <div class="contact-card">
+                            <h5>Fraktion Die Linke</h5>
+                            <p><i class="fas fa-envelope btn-icon"></i> <a href="mailto:stadtfraktion-die-linke@schwerin.de">stadtfraktion-die-linke@schwerin.de</a></p>
+                            <p><i class="fas fa-phone btn-icon"></i> <a href="tel:+493855452957">+49 385 545-2957</a></p>
+                            <p><small>Vorsitz: Gerd Böttger</small></p>
+                        </div>
+                        <div class="contact-card">
+                            <h5>Fraktion BÜNDNIS 90/DIE GRÜNEN/Die PARTEI</h5>
+                            <p><i class="fas fa-envelope btn-icon"></i> <a href="mailto:fraktion@gruene-schwerin.de">fraktion@gruene-schwerin.de</a></p>
+                            <p><i class="fas fa-phone btn-icon"></i> <a href="tel:+493855452970">+49 385 545-2970</a></p>
+                            <p><small>Vorsitz: Arndt Müller</small></p>
+                        </div>
+                        <div class="contact-card">
+                            <h5>AfD-Fraktion</h5>
+                            <p><i class="fas fa-envelope btn-icon"></i> <a href="mailto:kontakt@afd-sn.de">kontakt@afd-sn.de</a></p>
+                            <p><i class="fas fa-phone btn-icon"></i> <a href="tel:+493855452965">+49 385 545-2965</a></p>
+                            <p><small>Vorsitz: Petra Federau</small></p>
+                        </div>
+                        <div class="contact-card">
+                            <h5>Fraktion Unabhängige Bürger / FDP</h5>
+                            <p><i class="fas fa-info-circle btn-icon"></i> Eine zentrale E-Mail/Telefonnummer für die gemeinsame Fraktion ist uns nicht bekannt. Bitte kontaktieren Sie die Fraktion über die Stadtverwaltung oder die Webseiten der beteiligten Parteien/Wählergruppen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section no-print">
+            <div class="section-header">
+                <i class="fas fa-comment"></i> Feedback & Kontakt zur Initiative
+            </div>
+            <div class="section-content">
+                <p>Haben Sie weitere Informationen, möchten sich für den Erhalt des Spielplatzes engagieren oder haben Sie Feedback zu dieser Seite? Wir freuen uns über Ihre Nachricht!</p>
+                <p style="margin-top: 15px; font-size: 1.1rem; text-align: center; background-color: var(--light-gray); padding: 20px; border-radius: var(--border-radius);">
+                    Bitte kontaktieren Sie die Initiative direkt per E-Mail:<br>
+                    <strong><a href="mailto:ask-schwerin@mail.de" style="text-decoration: underline; font-size: 1.2rem;"><i class="fas fa-envelope btn-icon"></i>ask-schwerin@mail.de</a></strong>
+                </p>
+            </div>
+        </div>
+
+         <div class="section">
+            <div class="section-header">
+                <i class="fas fa-link"></i> Weiterführende Links
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><a href="https://www.instagram.com/aktion.spielplatz/" target="_blank">Instagram: Aktion Spielplatz</a> - Offizielle Instagram-Seite der Initiative</li>
+                    <li><a href="https://www.change.org/p/oberb%C3%BCrgermeister-rico-badenschier-den-erhalt-des-spielplatz-in-lankow-neben-dem-%C3%A4rztehaus-penny-markt" target="_blank">Petition zum Erhalt des Spielplatzes</a></li>
+                    <li><a href="https://schwerin.news/" target="_blank">schwerin.news</a> - Lokale Nachrichten</li>
+                    <li><a href="https://www.nordkurier.de/regional/schwerin/" target="_blank">Nordkurier - Schwerin</a></li>
+                    <li><a href="https://www.schwerin.de/" target="_blank">Stadt Schwerin</a> - Offizielle Website</li>
+                    <li><a href="https://bis.schwerin.de/" target="_blank">Bürgerinformationssystem Schwerin</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Diese Informationsseite dient der Aufklärung über den geplanten Verkauf und Abriss des Spielplatzes Lankow.</p>
+            <p>Stand: 28. Mai 2025</p>
+            <ul class="footer-links no-print">
+                <li><a href="#" id="printPage"><i class="fas fa-print"></i> Seite drucken</a></li>
+                <li><a href="#" id="downloadPDF"><i class="fas fa-file-pdf"></i> Als PDF speichern (Hinweis)</a></li>
+                <li><a href="#" id="shareLink"><i class="fas fa-share-alt"></i> Link teilen</a></li>
+            </ul>
+            <div id="pdfInfoMessage" class="form-feedback" style="display: none; margin: 10px auto; max-width: 600px;"></div>
+            <div class="impressum">
+                Impressum & Kontakt Initiative: <a href="mailto:ask-schwerin@mail.de">ask-schwerin@mail.de</a>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#" class="back-to-top no-print" id="backToTop" title="Nach oben"><i class="fas fa-arrow-up"></i></a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script>
+        // Initialize lightGallery
+        const lgContainer = document.getElementById('lightgallery');
+        if (lgContainer) {
+            lightGallery(lgContainer, {
+                speed: 500,
+                plugins: [lgZoom, lgThumbnail],
+                selector: '.gallery-item',
+                download: false 
+            });
+        }
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // Print page
+        const printButton = document.getElementById('printPage');
+        if (printButton) {
+            printButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.print();
+            });
+        }
+        
+        // Share link
+        const shareButton = document.getElementById('shareLink');
+        if (shareButton) {
+            shareButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                const shareData = {
+                    title: document.title,
+                    text: 'Informationen zum geplanten Verkauf und Abriss des Spielplatzes in Lankow. Schau es dir an!',
+                    url: window.location.href
+                };
+                if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+                    navigator.share(shareData)
+                        .then(() => console.log('Erfolgreich geteilt'))
+                        .catch((error) => console.log('Fehler beim Teilen:', error));
+                } else {
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                        displayTemporaryMessage(pdfInfoMessage, 'Link in die Zwischenablage kopiert!', 'success');
+                    }).catch(err => {
+                        console.error('Konnte Link nicht kopieren: ', err);
+                        displayTemporaryMessage(pdfInfoMessage, 'Link konnte nicht kopiert werden.', 'error');
+                    });
+                }
+            });
+        }
+
+        function shareSocial(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Rettet den Spielplatz Lankow! Infos hier: ");
+            let shareUrl = "";
+
+            switch(platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://api.whatsapp.com/send?text=${text}${url}`;
+                    break;
+                 case 'email':
+                    shareUrl = `mailto:?subject=${encodeURIComponent('Infos zum Spielplatz Lankow')}&body=${text}${url}`;
+                    break;
+            }
+            if (shareUrl) {
+                window.open(shareUrl, '_blank');
+            }
+        }
+        
+        const downloadPdfButton = document.getElementById('downloadPDF');
+        const pdfInfoMessage = document.getElementById('pdfInfoMessage');
+
+        function displayTemporaryMessage(element, message, type) {
+            if (element) {
+                element.textContent = message;
+                element.className = `form-feedback ${type}`; // Ensure class is set for styling
+                element.style.display = 'block';
+                setTimeout(() => {
+                    element.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        if (downloadPdfButton && pdfInfoMessage) {
+            downloadPdfButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                displayTemporaryMessage(pdfInfoMessage, 'Hinweis: Um die Seite als PDF zu speichern, nutzen Sie bitte die Druckfunktion Ihres Browsers (Strg+P oder Cmd+P) und wählen Sie "Als PDF speichern".', 'info');
+            });
+        }
+
+        // Toggle Fraktionen List
+        const toggleFraktionenBtn = document.getElementById('toggleFraktionenBtn');
+        const alleFraktionenContent = document.getElementById('alleFraktionenContent');
+
+        if (toggleFraktionenBtn && alleFraktionenContent) {
+            toggleFraktionenBtn.addEventListener('click', () => {
+                const isHidden = alleFraktionenContent.style.display === 'none';
+                if (isHidden) {
+                    alleFraktionenContent.style.display = 'block';
+                    toggleFraktionenBtn.innerHTML = '<i class="fas fa-users btn-icon"></i> Fraktionen ausblenden';
+                } else {
+                    alleFraktionenContent.style.display = 'none';
+                    toggleFraktionenBtn.innerHTML = '<i class="fas fa-users btn-icon"></i> Alle Fraktionen anzeigen';
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
